@@ -48,7 +48,6 @@ public class DskDrv extends AppCompatActivity {
 
     String get_() throws IOException {
 
-
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -75,10 +74,7 @@ public class DskDrv extends AppCompatActivity {
 
     }
 
-
     void alert_premission(){
-
-
         li= LayoutInflater.from(DskDrv.this);
         view=li.inflate(R.layout.alert_premission,null);
         final AlertDialog.Builder ad_b=new AlertDialog.Builder(DskDrv.this);
@@ -87,27 +83,8 @@ public class DskDrv extends AppCompatActivity {
          wv=(WebView) findViewById(R.id.webview);
 
 
-
-
          final String[] s = new String[1];
 
-/*                    wv.setWebViewClient(new WebViewClient(){
-                        @Override
-                        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                            if (url.startsWith("dskdrv://")) {
-                                s[0] =url.toString();
-                                wv.destroy();
-                                ad_b.setCancelable(true);
-
-                    return true;
-                }
-                return false;
-            }
-        });
-
-
-
-*/
         wv.getSettings().setJavaScriptEnabled(true);
         wv.getSettings().setSaveFormData(true);
         wv.getSettings().setBuiltInZoomControls(true);
