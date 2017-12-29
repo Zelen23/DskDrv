@@ -21,7 +21,7 @@ import okhttp3.Response;
 
 public class DskDrv extends AppCompatActivity {
 
-
+// creat dev branches and push
     Button bt;
     TextView tv;
     View view;
@@ -39,8 +39,6 @@ public class DskDrv extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
 
                 Log.i("onClk","+++");
             }
